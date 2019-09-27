@@ -22,12 +22,27 @@ and two RightTriangle objects.
 
  		//Circle constructor
  		Circle circle1 = new Circle();
+ 		Circle circle2 = new Circle();
+
+ 		circle1.setRadius(2.66);
+ 		System.out.println("circle1 radius: " + circle1.getRadius());
+ 		System.out.println("circle1 area: " + circle1.getArea());
+ 		System.out.println("circle1 perimeter: " + circle1.getPerimeter());
+
+ 		System.out.println("//////////////////////////********************");
+
+ 		circle2.setRadius(3.99);
+ 		System.out.println("circle2 radius: " + circle2.getRadius());
+ 		System.out.println("circle2 area: " + circle2.getArea());
+ 		System.out.println("circle2 perimeter: " + circle2.getPerimeter());
+
+
 
  	}
  }
 
  class Circle{
- 	private double radius;
+ 	private double radius, area, perimeter;
 
 
  	//radius getter
@@ -41,13 +56,13 @@ and two RightTriangle objects.
 
  	//getArea method
  	public double getArea(){
- 		double area = 3.14*Math.pow(getRadius(), 2);
+ 		area = 3.14*Math.pow(getRadius(), 2);
  		return area;
  	}
 
  	//getPerimeter method
  	public double getPerimeter(){
- 		double perimeter = 2*3.14*getRadius();
+ 		perimeter = 2*3.14*getRadius();
  		return perimeter;
  	}
 
