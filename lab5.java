@@ -32,16 +32,16 @@ and two RightTriangle objects.
 
  	//radius getter
  	public double getRadius(){
- 		return raduis;
+ 		return radius;
  	}
  	//radius setter
- 	public double setRadius(double newRadius){
+ 	public void setRadius(double newRadius){
  		this.radius = newRadius;
  	}
 
  	//getArea method
  	public double getArea(){
- 		double area = 3.14*(getRadius())^2;
+ 		double area = 3.14*Math.pow(getRadius(), 2);
  		return area;
  	}
 
