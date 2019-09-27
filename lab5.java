@@ -20,14 +20,41 @@ and two RightTriangle objects.
  public class Lab5{
  	public static void main(String[] args){
 
+ 		//Circle constructor
+ 		Circle circle1 = new Circle();
+
  	}
  }
 
  class Circle{
- 	double radius;
+ 	private double radius;
+
+
+ 	//radius getter
+ 	public double getRadius(){
+ 		return raduis;
+ 	}
+ 	//radius setter
+ 	public double setRadius(double newRadius){
+ 		this.radius = newRadius;
+ 	}
+
+ 	//getArea method
+ 	public double getArea(){
+ 		double area = 3.14*(getRadius())^2;
+ 		return area;
+ 	}
+
+ 	//getPerimeter method
+ 	public double getPerimeter(){
+ 		double perimeter = 2*3.14*getRadius();
+ 		return perimeter;
+ 	}
 
  }
 
+ /*
  class RightTriangle{
 
  }
+ */
