@@ -73,6 +73,8 @@ It should then display which Circle object has the largest area and which RightT
  		return perimeter;
  	}
 
+ 	
+
  }
 
  
@@ -112,6 +114,7 @@ and methods getArea and getPerimeter.
 
  	}
 
+ 	//constructor
  	public RightTriangle(double base, double height){
  		this.base = base;
  		this.height = height;
