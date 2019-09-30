@@ -1,23 +1,70 @@
-/*
 
-
-Then create a test application which queries the user for the needed data to create two Circle objects 
-and two RightTriangle objects.
-It will then display all information about the four objects. 
-It should then display which Circle object has the largest area and which RightTriangle object has the largest area.
-*/
 
  import java.util.Scanner;
 
  public class Lab5{
  	public static void main(String[] args){
 
+ 		/*
+		Then create a test application which queries the user for the needed data to create two Circle objects 
+		and two RightTriangle objects.
+		It will then display all information about the four objects. 
+		It should then display which Circle object has the largest area and which RightTriangle object has the largest area.
+		*/
+
+		double radius, base, height;
+		Scanner scan = new Scanner(System.in);
+
+		System.out.print("Enter the radius for the first circle: ");
+		radius = scan.nextDouble();
+		Circle circle1 = new Circle(radius);
+		System.out.println("\n");
+
+		System.out.print("Enter the radius for the second circle: ");
+		radius = scan.nextDouble();
+		Circle circle2 = new Circle(radius);
+		System.out.println("\n");
+
+		System.out.print("Enter the base of the first right triangle: ");
+ 		base = scan.nextDouble();
+ 		System.out.print("Enter the height of the first right triangle: ");
+ 		height = scan.nextDouble();
+ 		RightTriangle rt1 = new RightTriangle(base, height);
+ 		System.out.println("\n");
+
+ 		System.out.print("Enter the base of the second right triangle: ");
+ 		base = scan.nextDouble();
+ 		System.out.print("Enter the height of the second right triangle: ");
+ 		height = scan.nextDouble();
+ 		RightTriangle rt2 = new RightTriangle(base, height);
+ 		System.out.println("\n");
+
+		System.out.println("circle1 radius: " + circle1.getRadius());
+ 		System.out.println("circle1 area: " + circle1.getArea());
+ 		System.out.println("circle1 perimeter: " + circle1.getPerimeter());
+		System.out.println("\n");
+
+ 		System.out.println("circle2 radius: " + circle2.getRadius());
+ 		System.out.println("circle2 area: " + circle2.getArea());
+ 		System.out.println("circle2 perimeter: " + circle2.getPerimeter());
+ 		System.out.println("\n");
+
+ 		System.out.println("Right Triangle 1 Base: " + rt1.getBase());
+ 		System.out.println("Right Triangle 1 Height: " + rt1.getHeight());
+ 		System.out.println("Right Triangle 1 Hypotenuse: " + rt1.getHypotenuse());
+ 		System.out.println("\n");
+
+ 		System.out.println("Right Triangle 2 Base: " + rt2.getBase());
+ 		System.out.println("Right Triangle 2 Height: " + rt2.getHeight());
+ 		System.out.println("Right Triangle 2 Hypotenuse: " + rt2.getHypotenuse());
+ 		System.out.println("\n");
+
  		//Circle constructor
  		//Circle circle1 = new Circle();
  		//Circle circle2 = new Circle();
 
  		//circle1.setRadius(2.66);
-
+		/*
  		Circle circle1 = new Circle(2.66);
  		System.out.println("circle1 radius: " + circle1.getRadius());
  		System.out.println("circle1 area: " + circle1.getArea());
@@ -44,6 +91,7 @@ It should then display which Circle object has the largest area and which RightT
  		//System.out.println(rt1.getBase());
  		//System.out.println(rt1.getHeight());
  		//System.out.println(rt1.getHypotenuse());
+ 		*/
  	}
  }
 
@@ -120,7 +168,7 @@ and methods getArea and getPerimeter.
  		this.base = newBase;
  		this.height = newHeight;
  		this.hypotenuse = getHypotenuse();
- 		System.out.println("Hypotenuse: " + getHypotenuse());
+ 		//System.out.println("Hypotenuse: " + getHypotenuse());
 
  	}
 
@@ -128,7 +176,9 @@ and methods getArea and getPerimeter.
  	public RightTriangle(double base, double height){
  		this.base = base;
  		this.height = height;
- 		System.out.println("Hypotenuse: " + getHypotenuse());
+ 		//this.setvalues(base, height);
+ 		//setValues(base, height);
+ 		//System.out.println("Hypotenuse: " + getHypotenuse());
  		
  	}
 
