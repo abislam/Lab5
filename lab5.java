@@ -1,8 +1,4 @@
 /*
-Create a class Circle with one instance variable of type double called radius. 
-Then define an appropriate constructor that takes an initial value for the radius, get and set methods for the radius, 
-and methods getArea and getPerimeter.(done)
-
 
 
 Then create a test application which queries the user for the needed data to create two Circle objects 
@@ -17,17 +13,20 @@ It should then display which Circle object has the largest area and which RightT
  	public static void main(String[] args){
 
  		//Circle constructor
- 		Circle circle1 = new Circle();
- 		Circle circle2 = new Circle();
+ 		//Circle circle1 = new Circle();
+ 		//Circle circle2 = new Circle();
 
- 		circle1.setRadius(2.66);
+ 		//circle1.setRadius(2.66);
+
+ 		Circle circle1 = new Circle(2.66);
  		System.out.println("circle1 radius: " + circle1.getRadius());
  		System.out.println("circle1 area: " + circle1.getArea());
  		System.out.println("circle1 perimeter: " + circle1.getPerimeter());
 
  		System.out.println("//////////////////////////********************");
 
- 		circle2.setRadius(3.99);
+ 		//circle2.setRadius(3.99);
+ 		Circle circle2 = new Circle(3.99);
  		System.out.println("circle2 radius: " + circle2.getRadius());
  		System.out.println("circle2 area: " + circle2.getArea());
  		System.out.println("circle2 perimeter: " + circle2.getPerimeter());
@@ -47,6 +46,12 @@ It should then display which Circle object has the largest area and which RightT
  		//System.out.println(rt1.getHypotenuse());
  	}
  }
+
+ /*
+Create a class Circle with one instance variable of type double called radius. 
+Then define an appropriate constructor that takes an initial value for the radius, get and set methods for the radius, 
+and methods getArea and getPerimeter.(done)
+ */
 
  class Circle{
  	private double radius, area, perimeter;
@@ -71,6 +76,11 @@ It should then display which Circle object has the largest area and which RightT
  	public double getPerimeter(){
  		perimeter = 2*3.14*getRadius();
  		return perimeter;
+ 	}
+
+ 	//constructor
+ 	public Circle(double radius){
+ 		this.radius = radius;
  	}
 
  	
