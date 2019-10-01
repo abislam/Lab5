@@ -15,6 +15,7 @@
 		double radius, base, height;
 		Scanner scan = new Scanner(System.in);
 
+		System.out.println("\n");
 		System.out.print("Enter the radius for the first circle: ");
 		radius = scan.nextDouble();
 		Circle circle1 = new Circle(radius);
@@ -62,6 +63,18 @@
  		System.out.println("Right Triangle 1 Area: " + rt2.getArea());
  		System.out.println("Right Triangle 1 Perimeter: " + rt2.getPerimeter());
  		System.out.println("\n");
+
+ 		if(circle1.getArea() > circle2.getArea()){
+ 			System.out.println("Circle 1 has a greater Area than Circle 2\n");
+ 		}else{
+ 			System.out.println("Circle 2 has a greater Area than Circle 1\n");
+ 		}
+
+ 		 if(rt1.getArea() > rt2.getArea()){
+ 			System.out.println("Right Triangle 1 has a greater Area than Right Triangle 2\n");
+ 		}else{
+ 			System.out.println("Right Triangle 2 has a greater Area than Right Triangle 1\n");
+ 		}
 
  	}
  }
@@ -151,18 +164,12 @@ and methods getArea and getPerimeter.
  		this.base = newBase;
  		this.height = newHeight;
  		this.hypotenuse = getHypotenuse();
- 		//System.out.println("Hypotenuse: " + getHypotenuse());
-
  	}
 
  	//constructor
  	public RightTriangle(double base, double height){
  		this.base = base;
- 		this.height = height;
- 		//this.setvalues(base, height);
- 		//setValues(base, height);
- 		//System.out.println("Hypotenuse: " + getHypotenuse());
- 		
+ 		this.height = height;		
  	}
 
 
