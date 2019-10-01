@@ -52,46 +52,17 @@
  		System.out.println("Right Triangle 1 Base: " + rt1.getBase());
  		System.out.println("Right Triangle 1 Height: " + rt1.getHeight());
  		System.out.println("Right Triangle 1 Hypotenuse: " + rt1.getHypotenuse());
+ 		System.out.println("Right Triangle 1 Area: " + rt1.getArea());
+ 		System.out.println("Right Triangle 1 Perimeter: " + rt1.getPerimeter());
  		System.out.println("\n");
 
  		System.out.println("Right Triangle 2 Base: " + rt2.getBase());
  		System.out.println("Right Triangle 2 Height: " + rt2.getHeight());
  		System.out.println("Right Triangle 2 Hypotenuse: " + rt2.getHypotenuse());
+ 		System.out.println("Right Triangle 1 Area: " + rt2.getArea());
+ 		System.out.println("Right Triangle 1 Perimeter: " + rt2.getPerimeter());
  		System.out.println("\n");
 
- 		//Circle constructor
- 		//Circle circle1 = new Circle();
- 		//Circle circle2 = new Circle();
-
- 		//circle1.setRadius(2.66);
-		/*
- 		Circle circle1 = new Circle(2.66);
- 		System.out.println("circle1 radius: " + circle1.getRadius());
- 		System.out.println("circle1 area: " + circle1.getArea());
- 		System.out.println("circle1 perimeter: " + circle1.getPerimeter());
-
- 		System.out.println("//////////////////////////********************");
-
- 		//circle2.setRadius(3.99);
- 		Circle circle2 = new Circle(3.99);
- 		System.out.println("circle2 radius: " + circle2.getRadius());
- 		System.out.println("circle2 area: " + circle2.getArea());
- 		System.out.println("circle2 perimeter: " + circle2.getPerimeter());
-
-		System.out.println("//////////////////////////********************");
-
- 		RightTriangle rt1 = new RightTriangle(22,31);
- 		//System.out.println(rt1.getBase());
- 		//System.out.println(rt1.getHeight());
- 		//System.out.println(rt1.getHypotenuse());
-
- 		System.out.println("//////////////////////////********************");
-
- 		rt1.setValues(34.0,50.0);
- 		//System.out.println(rt1.getBase());
- 		//System.out.println(rt1.getHeight());
- 		//System.out.println(rt1.getHypotenuse());
- 		*/
  	}
  }
 
@@ -145,7 +116,7 @@ and methods getArea and getPerimeter.
 */
 
  class RightTriangle{
- 	private double base, height, hypotenuse;
+ 	private double base, height, hypotenuse, area, perimeter;
 
  	//getBase
  	public double getBase(){
@@ -161,6 +132,18 @@ and methods getArea and getPerimeter.
  	public double getHypotenuse(){
  		hypotenuse = Math.sqrt(Math.pow(getBase(), 2) + Math.pow(getHeight(), 2));
  		return hypotenuse;
+ 	}
+
+ 	//getArea
+ 	public double getArea(){
+ 		area = (getBase()*getHeight())/2;
+ 		return area;
+ 	}
+
+ 	//getPerimeter
+ 	public double getPerimeter(){
+ 		perimeter = getBase() + getHeight() + getHypotenuse();
+ 		return perimeter;
  	}
 
  	//setValues
